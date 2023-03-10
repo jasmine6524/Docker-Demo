@@ -1,4 +1,4 @@
-FROM openvino/ubuntu20_runtime:latest
+FROM docker.io/openvino/ubuntu20_runtime:latest
 USER root
 RUN pip3 install --upgrade pip \
   && pip3 install flask \
