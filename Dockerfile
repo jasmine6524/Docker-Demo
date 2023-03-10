@@ -1,5 +1,4 @@
 FROM openvino/ubuntu20_runtime:latest
-USER jasmine
 RUN apt-get update
 RUN pip3 install --upgrade pip \
   && pip3 install flask \
