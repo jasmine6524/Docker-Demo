@@ -4,6 +4,7 @@ import cv2
 # from infer_with_openvino_onnx import *
 from flask import Flask, request, jsonify
 from werkzeug.utils import secure_filename
+from gevent import pywsgi
 
 app = Flask(__name__)
 
@@ -25,5 +26,7 @@ def hello():
     return "hello docker"
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=5000, debug=False)
+    # app.run(host='0.0.0.0', port=5000, debug=False)
+    server = pywsgi.WSGIServer(('0.0.0.0', 80), app)
+    server.server_forever()
     # app.run(debug=True)

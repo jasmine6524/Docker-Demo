@@ -3,7 +3,8 @@ USER root
 RUN pip3 install --upgrade pip \
   && pip3 install flask \
   && pip3 install opencv-python \
-  && pip3 install numpy
+  && pip3 install numpy \
+  && pip3 install gevent
 RUN mkdir /app
 RUN mkdir /app/res
 WORKDIR /app
