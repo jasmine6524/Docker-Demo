@@ -1,4 +1,5 @@
 FROM openvino/ubuntu20_runtime:latest
+USER root
 RUN pip3 install --upgrade pip \
   && pip3 install flask \
   && pip3 install opencv-python \
